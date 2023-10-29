@@ -47,12 +47,10 @@ async fn fantoccini_main(
         .connect("http://localhost:4444")
         .await?;
 
-    // Go to the Rust website.
     client
         .goto("https://www.decisionproblem.com/paperclips/index2.html")
         .await?;
 
-    // Click the "Get Started" button.
     let button = client
         .wait()
         .for_element(Locator::Css("#btnMakePaperclip"))
